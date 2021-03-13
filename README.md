@@ -1,7 +1,7 @@
 # Developement Environment Setup For Android Device 
 
 
-# Mongo Setup In Android
+## `MongoDB` Setup In Android
 
 ```sh
 
@@ -17,9 +17,13 @@ wget https://its-pointless.github.io/setup-pointless-repo.sh
 
 bash setup-pointless-repo.sh
 
-pkg mongodb
+# Install Mongodb
 
-# Install necssary packages
+pkg i mongodb
+
+# Setup storage directory MongoDB
+
+# Install necessary packages
 
 pkg i clang cmake python -y
 

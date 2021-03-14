@@ -67,7 +67,7 @@ mv * $PREFIX/usr/lib
 mongod
 
 ```
-Open new Session via Termux's left sidebar (or) <kdb>CTRL+T</kdb>
+Open new Session via Termux's left sidebar (or) <kbd>CTRL+T</kbd>
 
 ```sh
 # Start CLI Shell of MongoDB

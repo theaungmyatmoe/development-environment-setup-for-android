@@ -1,5 +1,8 @@
 # Developement Environment Setup For Android Device 
 
+> If someone said to you something like that "You can do nothing in Android bla bla ..." ,you have to say him/her like that "Go fuck yourself".
+>
+> ~ Aung Myat Moe
 
 ## `MongoDB` Setup
 
@@ -64,7 +67,6 @@ mv * $PREFIX/usr/lib
 mongod
 
 ```
-
 Open new Session via Termux's left sidebar (or) <kdb>CTRL+T</kdb>
 
 ```sh

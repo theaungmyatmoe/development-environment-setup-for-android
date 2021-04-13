@@ -1,5 +1,8 @@
 [book]
-author = ["Aung Myat Moe"]
+author = [
+"Aung Myat Moe (@amm834)",
+]
+
 language = "en"
 multilingual = true
 src = "src"
@@ -8,4 +11,3 @@ title = "Developement Environment Setup For Android Linux"
 
 [build]
 build-dir = "docs"
-create-missing = false

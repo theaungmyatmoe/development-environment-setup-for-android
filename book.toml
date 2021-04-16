@@ -8,6 +8,9 @@ multilingual = true
 src = "src"
 title = "Developement Environment Setup For Android Linux"
 
+<<<<<<< HEAD
 
 [build]
 build-dir = "docs"
+=======
+>>>>>>> main

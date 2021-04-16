@@ -1,6 +1,6 @@
 # Summary
 
-- [Contents](./contents.md)
+- [About](./about.md)
 - [How to read this book?](./how-to-read.md)
 - [Hardware and Software Requirements](./hardware-and-software-requirements.md)
 - [Getting Start](./getting-start.md)

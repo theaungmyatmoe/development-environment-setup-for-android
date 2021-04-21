@@ -1,0 +1,31 @@
+name : Github Pages
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+
+      - name: Link check
+        run: |
+          curl -LSfs https://japaric.github.io/trust/install.sh | \
+          sh -s -- --git Michael-F-Bryan/mdbook-linkcheck
+
+      - name: Build
+        run: cd book && mdbook build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./book
+          allow_empty_commit: true

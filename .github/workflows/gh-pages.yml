@@ -14,11 +14,6 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - name: Link check
-        run: |
-          curl -LSfs https://japaric.github.io/trust/install.sh | \
-          sh -s -- --git Michael-F-Bryan/mdbook-linkcheck
-
       - name: Build
         run: cd book && mdbook build
 

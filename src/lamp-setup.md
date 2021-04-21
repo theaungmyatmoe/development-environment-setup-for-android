@@ -9,6 +9,7 @@
 # Install Dependencies
 
 ```sh
+->
 pkg up # upgrade the system
 
 pkg i php apache2 php-apache mariadb # install the dependencies

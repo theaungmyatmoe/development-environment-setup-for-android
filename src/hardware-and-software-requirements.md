@@ -13,16 +13,3 @@
 
 Download `Termux` from Google Play Store or FDroid.
 
-# My Device Information
-
-  **Brand Name** 
-
- OPPO
- 
-**Model**
-
-CPH1933
-
- **Android Version**
-
-Android X (10.0)

@@ -1,26 +1,17 @@
-# Contribution
+# About This Project
 
-This online web book needs contributers who want to share their  knowledge for the serious developers who want to test (or) setup their SDE (Software Developement Environment) from PC to Android Linux.
+This is just a manual (or) guideline for developers who want to develope their application in Android Linux.
+In Android Linux we can do many cool stuffs but don't forget everything will not work in it.
 
-**Requirements**
+# What Android can do?
 
-- You should know **Mark Down** mark up language to write this book.
-- Under `/src` directory you just need to create your own `markdown` file and add title and file path to the `/src/SUMMARY.md`.
+In Android Linux you can develope web application,system adminstration (if you have root access),hacking something (you should have root access but we can do a few thing without root access) ,etc.
 
-**Tool**
+# What we will use?
 
-I am using `mdbook` to create **Markdown Book**.You can download `mdbook` via `cargo` that is `rust` package manager.
+We will use `Termux` (a terminal emulator for Android) to run Linux/Unit commands and it will help you to install some compilers such as PHP,RustLang,C++,etc.
+`Termux` will help us to develope our applications in Android Linux.
 
-If you don't want to download the `mdbook`,it is not a problem just add your lecture file and pull request to this project I will add your file by using `mdbook`.
+# Contributing
 
-# Contribution Guide Line
-
-Add your full name and github username to the `book.toml`'s `authors` array.
-
-```toml
-author = [
-"Aung Myat Moe (@amm834)",
-"Your Name (@your_github_username)"
-]
-```
-
+You can read contributing guidelines at [CONTRIBUTING.md](./CONTRIBUTING.md)

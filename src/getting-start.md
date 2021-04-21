@@ -41,7 +41,7 @@ apt install nano -y
 
 # Essential Commands
 
-## `touch`
+## touch
 
 `touch` is a command that can create a file.
 
@@ -49,7 +49,7 @@ apt install nano -y
 touch greeting.txt
 ```
 
-## `ls`
+## ls
 
 `ls` is a command that will show the list of all files and directoties.
 
@@ -60,7 +60,7 @@ ls
 greeting.txt
 ```
 
-## `nano`
+## nano
 
 `nano` is a text editor that I explained above.
 
@@ -70,7 +70,7 @@ nano greeting.txt
 Type some text. <kbd>CTRL+S</kbd> to save the text file.
 <kbd>CTRL+X</kbd> to exist.
 
-## `cat`
+## cat
 
 When we want to read some data from text file or source code we can use `cat` command to get data from the file.
 
@@ -78,7 +78,8 @@ When we want to read some data from text file or source code we can use `cat` co
 cat greeting.txt
 Hello Guys and Gals
 ```
-`less`
+
+## less
 
 You can use `less` to read data from files.
 
@@ -88,7 +89,7 @@ less greeting.txt
 You can scroll to read the text.
 <kbd>q</kbd> to exist.
 
-## `tail`
+## tail
 
 You can also use `tail` to read data.
 
@@ -96,7 +97,7 @@ You can also use `tail` to read data.
 tail greeting.txt
 ```
 
-## `mkdir`
+## mkdir
 
 `mkdir` is a command  that can create a new directoty.
 
@@ -108,7 +109,7 @@ greeting.txt
 hello
 ```
 
-## `mv`
+## mv
 
 `mv` is a command that can move files and directoties.
 
@@ -122,7 +123,7 @@ ls hello # list files from hello directory
 greeting.txt
 ```
 
-## `cd`
+## cd
 
 `cd` stand for `Change Directory` that can change to another directory.
 
@@ -130,7 +131,7 @@ greeting.txt
 cd hello
 ```
 
-## `pwd`
+## pwd
 
 `pwd` is a command that let you know where your are?
 

@@ -10,7 +10,7 @@ src = "src"
 default-theme = "navy"
 preferred-dark-theme = "navy"
 additional-css = ["theme/custom.css"]
-git-repository-url = "https://github.com/amm834/Development-Environment-Setup-For-Android"
+git-repository-url = "https://github.com/amm834/development-environment-setup-for-android/"
 git-repository-icon = " fa-github"
 
 [output.html.print]

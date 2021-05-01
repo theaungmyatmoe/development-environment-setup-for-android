@@ -1,24 +1,25 @@
 # How to read this book?
 
-> Reading materials in this book is very important for the readers who want to make their Android Linux as Software Developement Environment.
+> Reading materials in this book is very important for the readers who want to make their Android Linux as Software Developement Environment (SDE).
 
-So,advanced readers should know how to read this book for easy reading purpose.
+**CLI**
 
-# Command Line
-
-To run the Linux/Unix commands.
+To run Linux/Unix commands.
 
 ```sh
 bash android-deveolpement-setup.sh
 ```
-# Source Codes
 
-The name of source code file is above the highlighted source code.
+**Source Codes**
 
-Source codes are with syntax highlighting.
+Source codes are illustrated with colors.
 
-**`greeting.sh`**
+**File Name (or) File Path**
+
+File name (or) file path is under the source codes.
+
 ```sh
 #!/usr/bin/env bash
 echo "Hello Guys and Gals!"
 ```
+<file>greeting.sh</file>

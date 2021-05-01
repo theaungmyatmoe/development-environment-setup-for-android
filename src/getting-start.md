@@ -1,28 +1,28 @@
 # Getting Start
 
-> When you want to touch the advanced of Linux,you should know the CLI (Command Line Interface).
-> When you know the CLI,you will love it.
+> When you want to touch the Linux,you should know Linux/Unix commands.
 
 # First Step
 
-Open the `Termux` and then run the following commands to install the core utilities.
+Open the `Termux` and then run the following commands to install the core utils.
 
 ```sh
+# install and upgrade the system
 apt update && apt upgrade -y
 ```
 
-You will need to wait some several minute that depends on your Internet Connection speed.
+You need to wait several minutes that's depending on your Internet Connection's speed.
 
 # Linux Package Manager
 
-`apt` is a Linux Package Manager that can download and install the Linux Packages that are `Termux` support.
+`apt` is a Linux Package Manager that can download and install the Linux Packages that are supported by `Termux` matainers.
 
-# Bash Shell
+# BASH Shell
 
-Bash is default SHELL of Termux that can run the Linux Commands.
+BASH is default shell of Termux that can run the Linux Commands.
 
-The following command will give you the Shell that you are using.
-In my case, I'm using `zsh` Shell.
+The following script will give you the name of default shell that you are using.
+In my case, I'm using `zsh` shell.
 
 ```sh
 echo $SHELL
@@ -31,9 +31,9 @@ echo $SHELL
 
 # Text Editor
 
-Text editor is very important for Linux.
-Default text editor of `Termux` is `nano` text editor.
-If it is not exist you can install via `apt`,in the next chapters we will use `meow` or `pkg` as a package manager
+Text editor is important for Linux especially when we are using the CLI.
+Default text editor of `Termux` is `nano`.
+If it is not exist you can install via `apt`.
 
 ```sh
 apt install nano -y
@@ -51,9 +51,9 @@ touch greeting.txt
 
 ## ls
 
-`ls` is a command that will show the list of all files and directoties.
+`ls` is a command that will show the list of all files and directories (folders).
 
-Let's check `greeting.txt` is exist or not via `ls`.
+Let's check the `greeting.txt` via `ls` to know it's existing or not.
 
 ```sh
 ls
@@ -72,21 +72,22 @@ Type some text. <kbd>CTRL+S</kbd> to save the text file.
 
 ## cat
 
-When we want to read some data from text file or source code we can use `cat` command to get data from the file.
+When we want to read data from text file or source code we can use `cat` command to read data from the file.
 
 ```sh
-cat greeting.txt
+cat greeting.txt # reading the file
 Hello Guys and Gals
 ```
 
 ## less
 
-You can use `less` to read data from files.
+You can also use `less` command to read data from files.
 
 ```sh
 less greeting.txt
 ```
-You can scroll to read the text.
+
+You can scroll down (or) up to read the text.
 <kbd>q</kbd> to exist.
 
 ## tail
@@ -99,33 +100,33 @@ tail greeting.txt
 
 ## mkdir
 
-`mkdir` is a command  that can create a new directoty.
+`mkdir` (Make Directory) command can create a new directory.
 
 ```sh
 mkdir hello
 
-ls # list all files and dirs
+ls # list of all files and dirs (directoties)
 greeting.txt
 hello
 ```
 
 ## mv
 
-`mv` is a command that can move files and directoties.
+`mv` (stand for Move) can move files and directoties.
 
 ```sh
-mv greeting.txt hello
+mv greeting.txt hello # move the greeting.txt to the hello directory
 
-ls # list files & dirs
+ls # list of all files and dirs
 hello
 
-ls hello # list files from hello directory
+ls hello # list of all files and dirs from hello directory
 greeting.txt
 ```
 
 ## cd
 
-`cd` stand for `Change Directory` that can change to another directory.
+`cd` (stand for `Change Directory` ) can change to another directory.
 
 ```sh
 cd hello
@@ -133,10 +134,10 @@ cd hello
 
 ## pwd
 
-`pwd` is a command that let you know where your are?
+`pwd` command that let you know where is your current working directory?
 
 ```sh
-pwd
+pwd 
 /data/data/com.termux/files/home/hello
 ```
 

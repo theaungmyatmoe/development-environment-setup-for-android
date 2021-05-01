@@ -1,42 +1,44 @@
 # LAMP Stack Setup
 
-> LAMP stand for Linux,Apache Web Server,MySQL Database and PHP.
+> **LAMP** stand for **L**inux,**A**pache Web Server,**M**ySQL Database and **P**HP.
 
-# `pkg`
+# pkg
 
 `pkg` to use `apt` package manager more eaiser.
 
-# Install Dependencies
+# Installation of LAMP Dependencies
 
 ```sh
-->
 pkg up # upgrade the system
 
 pkg i php apache2 php-apache mariadb # install the dependencies
 ```
 
-`php` - to install PHP Interpreter
-`apache2` - to install Apache Web Server
-`php-apache` - is a `PHP` module for Apache Web Server
-`mariadb` - is a Relational Database alternative for `mysql`
+`php` - for  PHP Interpreter
 
-# Setting Up The PHP and Apache Server 
+`apache2` - for Apache Web Server
 
-When installion is finished,we need to change some config file of `Apache`.
-So,go to the `Apache`'s config directory.
+`php-apache` - is a `PHP` module for Apache
+
+`mariadb` - alternative of `MySQL`
+
+# Setting Up The PHP and Apache
+
+When the installion is finished, we will change some config file of `Apache`.
+So,change to the `Apache`'s config directory.
 
 ```sh
 cd $PREFIX/etc/apache2/conf.d
 ```
 
-Create the `php.conf` file using `nano` text editor.
+Create the `php.conf` config file.
 
 ```sh
 nano php.conf
 ```
-Add the following source code to load the module of `php-apache` from `$PREFIX/libexec/apache2/libphp.so` and save file.
 
-**`php.conf`**
+Add the following source code to load the `PHP` module from `$PREFIX/libexec/apache2/libphp.so` and save it.
+
 ```conf
 LoadModule php_module libexec/apache2/libphp.so
 <FilesMatch \.php$>
@@ -46,32 +48,34 @@ LoadModule php_module libexec/apache2/libphp.so
     DirectoryIndex index.php
 </IfModule>
 ```
+<file>php.conf</file>
 
-We need to include the new config file to the `httpd.conf`.
+We will include the new config file to the `httpd.conf`.
 
 ```sh
 cd $PREFIX/etc/apache2
-nano httpd.conf # open apache2 config file
+nano httpd.conf
 ```
 
-Go to the end of `httpd.conf` file and remove comment `#`.
+Go to the end of `httpd.conf` file and remove `#`.
 
-**`httpd.conf`**
+**Note** - `#` is a comment.
 
 ```conf
 #Include etc/apache2/conf.d/*.conf
 ```
+<file>httpd.conf</file>
 
-Find the `worker` Module of PHP that will not need for us.
+Find the `worker` module of `PHP` that does not need for us.
 
 <kbd>CTRL+W</kbd> and type `worker` and <kbd>Enter</kbd>.
-
-**`php.conf`**
 
 ```conf
 LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 ```
-Add comment `#`.
+<file>php.conf</file>
+
+Add `#`.
 
 ```conf
 LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
@@ -79,13 +83,12 @@ LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 
 Find `prefork` module and remove `#`.
 
-**`php.conf`**
-
 ```conf
 #LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 ```
+<file>php.conf</file>
 
-When we done the setting up of the config file,we will need to restart the `Apache`.
+When we did the setting up of the config files, we will need to restart the `Apache`.
 
 ```sh
 apachectl restart # restart the Apache Server
@@ -106,32 +109,30 @@ apachectl restart # to restart the server
 
 By default,Apache Server is running on `localhost:8080` (or) `127.0.0.7:8080`.
 
-To stop the Apache server just run the following command.
+To stop the Apache just run the following command.
 
 ```sh
-apachectl stop # to stop the server
+apachectl stop # to stop the Apache
 ```
 
 If you got the servername error open `httpd.conf` file and search `ServerName` and edit like below.
 
-**`php.conf`**
-
 ```conf
 ServerName localhost:8080
 ```
+<file>php.conf</file>
 
-Restart the server and test again.
+Restart the server and try again.
 
-Open Browser and search tthe address `localhost:8080` you will see `It work!`.It is the default page.We can change the server's root directory.
+Open Browser and search the address `localhost:8080` you will see `It work!`.It is the default page of `Apache`. We can change the server's root directory.
 
 Open `httpd.conf` and search the `DocumentRoot` and change the server's directory like below.
-
-**`php.conf`**
 
 ```conf
 DocumentRoot "/sdcard/htdocs"
 <Directory "/sdcard/htdocs">
 ```
+<file>php.conf</file>
 
 `/sdcard/htdocs` - is a directory in the **Internal Storage** of Android device.
 

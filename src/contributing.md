@@ -1,19 +1,18 @@
 # Contributing
 
-This online web book needs contributers who want to share their  knowledge for the serious developers who want to test (or) setup their SDE (Software Developement Environment) from PC to Android Linux.
+This book needs contributers who want to share their knowledge for the developers who want to develope their softwares on Android.
 
 **Requirements**
 
-- You should know **Mark Down** mark up language to write this book.
-- Under `/src` directory you just need to create your own `markdown` file and add title and file path to the `/src/SUMMARY.md`.
+- You should know **Markdown** mark up language to write this book.
+- Under `/src` directory, create new chapter and add the title of the chapter to the `src/SUMMARY.md`.
 
-**Tool**
+**Tools**
 
-I am using `mdbook` to create **Markdown Book**.You can download `mdbook` via `cargo` that is `rust` package manager.
+I am using `mdbook` to create this **Markdown Book**.You can download `mdbook` via `cargo` that is `rust` package manager.
 
-If you don't want to download the `mdbook`,it is not a problem just add your lecture file and pull request to this project I will add your file by using `mdbook`.
 
-# Contributing
+# Adding Your Name
 
 Add your full name and github username to the `book.toml`'s `authors` array.
 

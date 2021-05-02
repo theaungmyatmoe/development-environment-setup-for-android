@@ -177,27 +177,27 @@
                 <main>
                     <h1 id="getting-start"><a class="header" href="#getting-start">Getting Start</a></h1>
 <blockquote>
-<p>When you want to touch the advanced of Linux,you should know the CLI (Command Line Interface).
-When you know the CLI,you will love it.</p>
+<p>When you want to touch the Linux,you should know Linux/Unix commands.</p>
 </blockquote>
 <h1 id="first-step"><a class="header" href="#first-step">First Step</a></h1>
-<p>Open the <code>Termux</code> and then run the following commands to install the core utilities.</p>
-<pre><code class="language-sh">apt update &amp;&amp; apt upgrade -y
+<p>Open the <code>Termux</code> and then run the following commands to install the core utils.</p>
+<pre><code class="language-sh"># install and upgrade the system
+apt update &amp;&amp; apt upgrade -y
 </code></pre>
-<p>You will need to wait some several minute that depends on your Internet Connection speed.</p>
+<p>You need to wait several minutes that's depending on your Internet Connection's speed.</p>
 <h1 id="linux-package-manager"><a class="header" href="#linux-package-manager">Linux Package Manager</a></h1>
-<p><code>apt</code> is a Linux Package Manager that can download and install the Linux Packages that are <code>Termux</code> support.</p>
-<h1 id="bash-shell"><a class="header" href="#bash-shell">Bash Shell</a></h1>
-<p>Bash is default SHELL of Termux that can run the Linux Commands.</p>
-<p>The following command will give you the Shell that you are using.
-In my case, I'm using <code>zsh</code> Shell.</p>
+<p><code>apt</code> is a Linux Package Manager that can download and install the Linux Packages that are supported by <code>Termux</code> matainers.</p>
+<h1 id="bash-shell"><a class="header" href="#bash-shell">BASH Shell</a></h1>
+<p>BASH is default shell of Termux that can run the Linux Commands.</p>
+<p>The following script will give you the name of default shell that you are using.
+In my case, I'm using <code>zsh</code> shell.</p>
 <pre><code class="language-sh">echo $SHELL
 /data/data/com.termux/files/usr/bin/zsh
 </code></pre>
 <h1 id="text-editor"><a class="header" href="#text-editor">Text Editor</a></h1>
-<p>Text editor is very important for Linux.
-Default text editor of <code>Termux</code> is <code>nano</code> text editor.
-If it is not exist you can install via <code>apt</code>,in the next chapters we will use <code>meow</code> or <code>pkg</code> as a package manager</p>
+<p>Text editor is important for Linux especially when we are using the CLI.
+Default text editor of <code>Termux</code> is <code>nano</code>.
+If it is not exist you can install via <code>apt</code>.</p>
 <pre><code class="language-sh">apt install nano -y
 </code></pre>
 <h1 id="essential-commands"><a class="header" href="#essential-commands">Essential Commands</a></h1>
@@ -206,8 +206,8 @@ If it is not exist you can install via <code>apt</code>,in the next chapters we 
 <pre><code class="language-sh">touch greeting.txt
 </code></pre>
 <h2 id="ls"><a class="header" href="#ls">ls</a></h2>
-<p><code>ls</code> is a command that will show the list of all files and directoties.</p>
-<p>Let's check <code>greeting.txt</code> is exist or not via <code>ls</code>.</p>
+<p><code>ls</code> is a command that will show the list of all files and directories (folders).</p>
+<p>Let's check the <code>greeting.txt</code> via <code>ls</code> to know it's existing or not.</p>
 <pre><code class="language-sh">ls
 greeting.txt
 </code></pre>
@@ -218,45 +218,45 @@ greeting.txt
 <p>Type some text. <kbd>CTRL+S</kbd> to save the text file.
 <kbd>CTRL+X</kbd> to exist.</p>
 <h2 id="cat"><a class="header" href="#cat">cat</a></h2>
-<p>When we want to read some data from text file or source code we can use <code>cat</code> command to get data from the file.</p>
-<pre><code class="language-sh">cat greeting.txt
+<p>When we want to read data from text file or source code we can use <code>cat</code> command to read data from the file.</p>
+<pre><code class="language-sh">cat greeting.txt # reading the file
 Hello Guys and Gals
 </code></pre>
 <h2 id="less"><a class="header" href="#less">less</a></h2>
-<p>You can use <code>less</code> to read data from files.</p>
+<p>You can also use <code>less</code> command to read data from files.</p>
 <pre><code class="language-sh">less greeting.txt
 </code></pre>
-<p>You can scroll to read the text.
+<p>You can scroll down (or) up to read the text.
 <kbd>q</kbd> to exist.</p>
 <h2 id="tail"><a class="header" href="#tail">tail</a></h2>
 <p>You can also use <code>tail</code> to read data.</p>
 <pre><code class="language-sh">tail greeting.txt
 </code></pre>
 <h2 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h2>
-<p><code>mkdir</code> is a command  that can create a new directoty.</p>
+<p><code>mkdir</code> (Make Directory) command can create a new directory.</p>
 <pre><code class="language-sh">mkdir hello
 
-ls # list all files and dirs
+ls # list of all files and dirs (directoties)
 greeting.txt
 hello
 </code></pre>
 <h2 id="mv"><a class="header" href="#mv">mv</a></h2>
-<p><code>mv</code> is a command that can move files and directoties.</p>
-<pre><code class="language-sh">mv greeting.txt hello
+<p><code>mv</code> (stand for Move) can move files and directoties.</p>
+<pre><code class="language-sh">mv greeting.txt hello # move the greeting.txt to the hello directory
 
-ls # list files &amp; dirs
+ls # list of all files and dirs
 hello
 
-ls hello # list files from hello directory
+ls hello # list of all files and dirs from hello directory
 greeting.txt
 </code></pre>
 <h2 id="cd"><a class="header" href="#cd">cd</a></h2>
-<p><code>cd</code> stand for <code>Change Directory</code> that can change to another directory.</p>
+<p><code>cd</code> (stand for <code>Change Directory</code> ) can change to another directory.</p>
 <pre><code class="language-sh">cd hello
 </code></pre>
 <h2 id="pwd"><a class="header" href="#pwd">pwd</a></h2>
-<p><code>pwd</code> is a command that let you know where your are?</p>
-<pre><code class="language-sh">pwd
+<p><code>pwd</code> command that let you know where is your current working directory?</p>
+<pre><code class="language-sh">pwd 
 /data/data/com.termux/files/home/hello
 </code></pre>
 

@@ -177,30 +177,28 @@
                 <main>
                     <h1 id="lamp-stack-setup"><a class="header" href="#lamp-stack-setup">LAMP Stack Setup</a></h1>
 <blockquote>
-<p>LAMP stand for Linux,Apache Web Server,MySQL Database and PHP.</p>
+<p><strong>LAMP</strong> stand for <strong>L</strong>inux,<strong>A</strong>pache Web Server,<strong>M</strong>ySQL Database and <strong>P</strong>HP.</p>
 </blockquote>
-<h1 id="pkg"><a class="header" href="#pkg"><code>pkg</code></a></h1>
+<h1 id="pkg"><a class="header" href="#pkg">pkg</a></h1>
 <p><code>pkg</code> to use <code>apt</code> package manager more eaiser.</p>
-<h1 id="install-dependencies"><a class="header" href="#install-dependencies">Install Dependencies</a></h1>
-<pre><code class="language-sh">-&gt;
-pkg up # upgrade the system
+<h1 id="installation-of-lamp-dependencies"><a class="header" href="#installation-of-lamp-dependencies">Installation of LAMP Dependencies</a></h1>
+<pre><code class="language-sh">pkg up # upgrade the system
 
 pkg i php apache2 php-apache mariadb # install the dependencies
 </code></pre>
-<p><code>php</code> - to install PHP Interpreter
-<code>apache2</code> - to install Apache Web Server
-<code>php-apache</code> - is a <code>PHP</code> module for Apache Web Server
-<code>mariadb</code> - is a Relational Database alternative for <code>mysql</code></p>
-<h1 id="setting-up-the-php-and-apache-server"><a class="header" href="#setting-up-the-php-and-apache-server">Setting Up The PHP and Apache Server</a></h1>
-<p>When installion is finished,we need to change some config file of <code>Apache</code>.
-So,go to the <code>Apache</code>'s config directory.</p>
+<p><code>php</code> - for  PHP Interpreter</p>
+<p><code>apache2</code> - for Apache Web Server</p>
+<p><code>php-apache</code> - is a <code>PHP</code> module for Apache</p>
+<p><code>mariadb</code> - alternative of <code>MySQL</code></p>
+<h1 id="setting-up-the-php-and-apache"><a class="header" href="#setting-up-the-php-and-apache">Setting Up The PHP and Apache</a></h1>
+<p>When the installion is finished, we will change some config file of <code>Apache</code>.
+So,change to the <code>Apache</code>'s config directory.</p>
 <pre><code class="language-sh">cd $PREFIX/etc/apache2/conf.d
 </code></pre>
-<p>Create the <code>php.conf</code> file using <code>nano</code> text editor.</p>
+<p>Create the <code>php.conf</code> config file.</p>
 <pre><code class="language-sh">nano php.conf
 </code></pre>
-<p>Add the following source code to load the module of <code>php-apache</code> from <code>$PREFIX/libexec/apache2/libphp.so</code> and save file.</p>
-<p><strong><code>php.conf</code></strong></p>
+<p>Add the following source code to load the <code>PHP</code> module from <code>$PREFIX/libexec/apache2/libphp.so</code> and save it.</p>
 <pre><code class="language-conf">LoadModule php_module libexec/apache2/libphp.so
 &lt;FilesMatch \.php$&gt;
    SetHandler application/x-httpd-php
@@ -209,27 +207,29 @@ So,go to the <code>Apache</code>'s config directory.</p>
     DirectoryIndex index.php
 &lt;/IfModule&gt;
 </code></pre>
-<p>We need to include the new config file to the <code>httpd.conf</code>.</p>
+<p><file>php.conf</file></p>
+<p>We will include the new config file to the <code>httpd.conf</code>.</p>
 <pre><code class="language-sh">cd $PREFIX/etc/apache2
-nano httpd.conf # open apache2 config file
+nano httpd.conf
 </code></pre>
-<p>Go to the end of <code>httpd.conf</code> file and remove comment <code>#</code>.</p>
-<p><strong><code>httpd.conf</code></strong></p>
+<p>Go to the end of <code>httpd.conf</code> file and remove <code>#</code>.</p>
+<p><strong>Note</strong> - <code>#</code> is a comment.</p>
 <pre><code class="language-conf">#Include etc/apache2/conf.d/*.conf
 </code></pre>
-<p>Find the <code>worker</code> Module of PHP that will not need for us.</p>
+<p><file>httpd.conf</file></p>
+<p>Find the <code>worker</code> module of <code>PHP</code> that does not need for us.</p>
 <p><kbd>CTRL+W</kbd> and type <code>worker</code> and <kbd>Enter</kbd>.</p>
-<p><strong><code>php.conf</code></strong></p>
 <pre><code class="language-conf">LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 </code></pre>
-<p>Add comment <code>#</code>.</p>
+<p><file>php.conf</file></p>
+<p>Add <code>#</code>.</p>
 <pre><code class="language-conf">LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 </code></pre>
 <p>Find <code>prefork</code> module and remove <code>#</code>.</p>
-<p><strong><code>php.conf</code></strong></p>
 <pre><code class="language-conf">#LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 </code></pre>
-<p>When we done the setting up of the config file,we will need to restart the <code>Apache</code>.</p>
+<p><file>php.conf</file></p>
+<p>When we did the setting up of the config files, we will need to restart the <code>Apache</code>.</p>
 <pre><code class="language-sh">apachectl restart # restart the Apache Server
 </code></pre>
 <p>If we got the following error,</p>
@@ -241,20 +241,20 @@ httpd not running, trying to start
 apachectl restart # to restart the server
 </code></pre>
 <p>By default,Apache Server is running on <code>localhost:8080</code> (or) <code>127.0.0.7:8080</code>.</p>
-<p>To stop the Apache server just run the following command.</p>
-<pre><code class="language-sh">apachectl stop # to stop the server
+<p>To stop the Apache just run the following command.</p>
+<pre><code class="language-sh">apachectl stop # to stop the Apache
 </code></pre>
 <p>If you got the servername error open <code>httpd.conf</code> file and search <code>ServerName</code> and edit like below.</p>
-<p><strong><code>php.conf</code></strong></p>
 <pre><code class="language-conf">ServerName localhost:8080
 </code></pre>
-<p>Restart the server and test again.</p>
-<p>Open Browser and search tthe address <code>localhost:8080</code> you will see <code>It work!</code>.It is the default page.We can change the server's root directory.</p>
+<p><file>php.conf</file></p>
+<p>Restart the server and try again.</p>
+<p>Open Browser and search the address <code>localhost:8080</code> you will see <code>It work!</code>.It is the default page of <code>Apache</code>. We can change the server's root directory.</p>
 <p>Open <code>httpd.conf</code> and search the <code>DocumentRoot</code> and change the server's directory like below.</p>
-<p><strong><code>php.conf</code></strong></p>
 <pre><code class="language-conf">DocumentRoot &quot;/sdcard/htdocs&quot;
 &lt;Directory &quot;/sdcard/htdocs&quot;&gt;
 </code></pre>
+<p><file>php.conf</file></p>
 <p><code>/sdcard/htdocs</code> - is a directory in the <strong>Internal Storage</strong> of Android device.</p>
 <p>You can edit the directory path any time what you like but you must not add the <code>/</code> at the foreward of closing double quote.</p>
 <p>You will need to mount the internal storage by running this command.</p>

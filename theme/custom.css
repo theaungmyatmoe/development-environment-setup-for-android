@@ -1,6 +1,18 @@
 body {
-    font-family:serif;
+    font-family: serif;
 }
+
 code {
-    border-radius:5px;
+    border-radius: 5px;
+}
+
+file {
+    font-weight: bolder;
+    display: block;
+    width: 100%;
+    padding: 3px 0;
+    border-top: 0.5px solid #eee;
+    border-bottom: 0.5px solid #eee;
+    font-size: 13px;
+    font-style: italic;
 }

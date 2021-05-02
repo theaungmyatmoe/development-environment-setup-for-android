@@ -1,8 +1,10 @@
 # ME*N Setup
 
-> ME*N stand for Mongo Database,Express JS,Node.JS and * may be Vue or Angular or React.
+> ME*N stand for <i>**M**</i>ongo Database, <i>**E**</i>xpress JS, <i>**N**</i>ode.JS and * will be Vue (or) Angular (or) React.
 
-# `Node.js`
+# Node.js
+
+Install **Node JS**.
 
 ```sh
 pkg i nodejs
@@ -16,41 +18,44 @@ v14.15.4
 7.6.1
 ```
 
-Alternatively,you can use `yarn` node package manager.
+Alternatively,you can use `yarn` as node package manager.
 
 ```sh
+# to install `yarn`
 pkg i yarn 
 ```
 
-# `MongoDB`
+# MongoDB
 
-MongoDB is not officially support for `aarch64` and some others CPUs of Android.
+MongoDB is not officially support for `aarch64` and some CPUs of Android.
 
-First of all , we will need to download `itspointless` repo's `setup.sh` file to setup the our environment.
+First of all , we will download `itspointless` repo's `setup.sh` to install their deps (dependencies) to our environment.
 
 ```sh
-#  Download `setup-pointless-repo.sh` file
+#  Download `setup-pointless-repo.sh`
 wget https://its-pointless.github.io/setup-pointless-repo.sh
 
-# Setup the our environment
 bash setup-pointless-repo.sh
 ```
+
 Install the `Mongodb` by running following command.
 
 ```sh
 pkg i mongodb # to install mongodb
 ```
-When installation is finished,we need to create path to store data of `MongoDB`.
+
+When installation is finished, create path to store data of `MongoDB`.
 
 ```sh
 # setup the database storage directory for mongodb
 mkdir $PREFIX/ data
 mkdir $PREFIX/data db
 ```
-Testing the `mongodb`.
+
+**Testing**
 
 ```sh
-# Test mongodb
+# Test the mongodb
 ~ mongod --version
 
 db version v4.1.13
@@ -73,10 +78,10 @@ CANNOT LINK EXECUTABLE "mongod": library "libicudata.so.67" not found
 # Compile The `icu` Library
 
 ```sh
-# install the dependencies
+# install the deps
 pkg i clang cmake python -y
 
-# install `libicu67` from source code
+# download `libicu67` archieve
 wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
 
 # Extract (Unzip) `tar` archieve
@@ -86,10 +91,10 @@ cd icu/source
 
 ./configure --prefix=$PREFIX
 
-# Check  dependencies are exist or not (it will take some time)
+# Check  dependencies are exist or not (it will take long time be patient)
 make
 
-# Compile the source code of `icu` via `make`
+# Compile the source code of `icu`
 make install
 
 cd lib # `lib` directory stores compiled executable files
@@ -101,14 +106,14 @@ mv * $PREFIX/usr/lib
 mongod
 ```
 
-Open new Session via Termux's left sidebar (or) <kbd>CTRL+T</kbd>.
+Open new Session.
 
 ```sh
-# Connect with `mongodb` Client
+# Connect with `mongodb` Client to mongodb server
 mongo
 ```
 
-Let's test the `mongodb`.
+**Testing**
 
 ```sh
 > show dbs

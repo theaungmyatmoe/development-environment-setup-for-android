@@ -48,11 +48,10 @@ When installation is finished, create path to store data of `MongoDB`.
 
 ```sh
 # setup the database storage directory for mongodb
-mkdir $PREFIX/ data
-mkdir $PREFIX/data db
+mkdir -p /data/data/com.termux/files/usr/data/db
 ```
 
-**Testing**
+**Check Work Well or Not**
 
 ```sh
 # Test the mongodb
@@ -66,42 +65,12 @@ modules: none
 build environment:
     distarch: aarch64
     target_arch: aarch64
+    
 ```
 
-If you face the `icu` libary errors like below,you will need to compile library files from source code.
+If work test like below.
 
 ```sh
-~ mongod
-CANNOT LINK EXECUTABLE "mongod": library "libicudata.so.67" not found 
-```
-
-# Compile The `icu` Library
-
-```sh
-# install the deps
-pkg i clang cmake python -y
-
-# download `libicu67` archieve
-wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
-
-# Extract (Unzip) `tar` archieve
-tar -xf icu4c-67_1-src.tgz
-
-cd icu/source
-
-./configure --prefix=$PREFIX
-
-# Check  dependencies are exist or not (it will take long time be patient)
-make
-
-# Compile the source code of `icu`
-make install
-
-cd lib # `lib` directory stores compiled executable files
-
-# Move all compiled executable files to the `$PREFIX/usr/lib` directory
-mv * $PREFIX/usr/lib 
-
 # start the `mongodb` server
 mongod
 ```
@@ -123,3 +92,7 @@ local   0.000GB
 travel  0.000GB
 >
 ```
+
+If you face libiary error,check the link below.
+
+[Common Errors of Mongo DB](common-errors/mongodb.md)

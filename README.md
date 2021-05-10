@@ -1,3 +1,5 @@
+[![Github Pages](https://github.com/amm834/Development-Environment-Setup-For-Android/actions/workflows/gh-pages.yml/badge.svg?branch=main)](https://github.com/amm834/Development-Environment-Setup-For-Android/actions/workflows/gh-pages.yml)
+
 # About This Project
 
 This is just a manual (or) guideline for developers who want to develope their application in Android Linux.

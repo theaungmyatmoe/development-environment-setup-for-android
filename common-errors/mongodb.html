@@ -3,7 +3,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>About - Developement Environment Setup For Android Linux</title>
+    <title>Mongo DB - Developement Environment Setup For Android Linux</title>
     
     
 
@@ -18,32 +18,32 @@
     <meta name="theme-color" content="#ffffff" />
 
     
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="../favicon.svg">
     
     
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="../favicon.png">
     
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
     
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="../css/print.css" media="print">
     
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     
-    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
     
 
     <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
     
-    <link rel="stylesheet" href="theme/custom.css">
+    <link rel="stylesheet" href="../theme/custom.css">
     
 
     
@@ -51,7 +51,7 @@
 <body>
     <!-- Provide site root to javascript -->
     <script type="text/javascript">
-        var path_to_root = "";
+        var path_to_root = "../";
         var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy": "navy";
     </script>
 
@@ -103,7 +103,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html" class="active"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">8.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">8.1.</strong> Mongo DB</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="../how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="../hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="../getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="../lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="../me*n-setup.html"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="../common-errors/common-errors.html"><strong aria-hidden="true">8.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../common-errors/mongodb.html" class="active"><strong aria-hidden="true">8.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -139,7 +139,7 @@
 
                 <div class="right-buttons">
                     
-                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
                         <i id="print-button" class="fa fa-print"></i>
                     </a>
                     
@@ -175,32 +175,66 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="about"><a class="header" href="#about">About</a></h1>
+                    <h1 id="common-errors-of-mongo-db"><a class="header" href="#common-errors-of-mongo-db">Common Errors of Mongo DB</a></h1>
 <blockquote>
-<p>If someone said &quot;You can do nothing on Android bla bla ...&quot; to you ,you have to say him like that &quot;Go fuck yourself 👀&quot;.</p>
-<p>~ <a href="https://github.com/amm834">Aung Myat Moe</a></p>
+<p>Common error of Mongo DB</p>
 </blockquote>
-<p>This book is just a guideline for developers who want to develope their softwares in Android Linux.
-In Android Linux, we can do many stuffs but don't forget everything will not work on it well.</p>
-<h1 id="what-can-android-do"><a class="header" href="#what-can-android-do">What can Android do?</a></h1>
-<p>In Android Linux you can develope (or) learn web application developement, system adminstration, hacking something, etc.
-Sometime,we will need <code>root</code> access of Android Device but it is not necessary for ever.</p>
-<h1 id="what-will-we-use"><a class="header" href="#what-will-we-use">What will we use?</a></h1>
-<p>We will use <code>Termux</code> (a terminal emulator for Android) to run Linux/Unix commands and it will help us to install compilers such as PHP,Rust,C/C++ and etc.
-<code>Termux</code> will help us to develope our applications in Android Linux.</p>
-<h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
-<p>You can read contributing guidelines at <a href="./contributing.html">CONTRIBUTING.md</a></p>
+<h1 id="icu-libiary-error"><a class="header" href="#icu-libiary-error">ICU Libiary Error</a></h1>
+<p>If you face the <code>icu</code> libary errors like below,you will need to compile library files from source code.</p>
+<pre><code class="language-sh">~ mongod
+CANNOT LINK EXECUTABLE &quot;mongod&quot;: library &quot;libicudata.so.67&quot; not found 
+</code></pre>
+<h1 id="compile-the-icu-library"><a class="header" href="#compile-the-icu-library">Compile The <code>icu</code> Library</a></h1>
+<pre><code class="language-sh"># install the deps
+pkg i clang cmake python -y
+
+# download `libicu67` archieve
+wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
+
+# Extract (Unzip) `tar` archieve
+tar -xf icu4c-67_1-src.tgz
+
+cd icu/source
+
+./configure --prefix=$PREFIX
+
+# Check  dependencies are exist or not (it will take long time be patient)
+make
+
+# Compile the source code of `icu`
+make install
+
+cd lib # `lib` directory stores compiled executable files
+
+# Move all compiled executable files to the `$PREFIX/usr/lib` directory
+mv * $PREFIX/usr/lib 
+</code></pre>
+<pre><code class="language-sh"># start the `mongodb` server
+mongod
+</code></pre>
+<p>Open new Session.</p>
+<pre><code class="language-sh"># Connect with `mongodb` Client to mongodb server
+mongo
+</code></pre>
+<p><strong>Testing</strong></p>
+<pre><code class="language-sh">&gt; show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+travel  0.000GB
+&gt;
+</code></pre>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
-
-                    
-                    <a rel="next" href="contributing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="../common-errors/common-errors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+                    
+
                     
 
                     <div style="clear: both"></div>
@@ -210,11 +244,11 @@ Sometime,we will need <code>root</code> access of Android Device but it is not n
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
-
-            
-            <a rel="next" href="contributing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                <i class="fa fa-angle-right"></i>
+            <a rel="prev" href="../common-errors/common-errors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
             </a>
+            
+
             
         </nav>
 
@@ -235,14 +269,14 @@ Sometime,we will need <code>root</code> access of Android Device but it is not n
     
 
     
-    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
     
 
-    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Custom JS scripts -->
     

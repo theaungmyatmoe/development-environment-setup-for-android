@@ -105,7 +105,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Test</div></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">8.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">8.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -479,10 +479,9 @@ bash setup-pointless-repo.sh
 </code></pre>
 <p>When installation is finished, create path to store data of <code>MongoDB</code>.</p>
 <pre><code class="language-sh"># setup the database storage directory for mongodb
-mkdir $PREFIX/ data
-mkdir $PREFIX/data db
+mkdir -p /data/data/com.termux/files/usr/data/db
 </code></pre>
-<p><strong>Testing</strong></p>
+<p><strong>Check Work Well or Not</strong></p>
 <pre><code class="language-sh"># Test the mongodb
 ~ mongod --version
 
@@ -494,7 +493,33 @@ modules: none
 build environment:
     distarch: aarch64
     target_arch: aarch64
+    
 </code></pre>
+<p>If work test like below.</p>
+<pre><code class="language-sh"># start the `mongodb` server
+mongod
+</code></pre>
+<p>Open new Session.</p>
+<pre><code class="language-sh"># Connect with `mongodb` Client to mongodb server
+mongo
+</code></pre>
+<p><strong>Testing</strong></p>
+<pre><code class="language-sh">&gt; show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+travel  0.000GB
+&gt;
+</code></pre>
+<p>If you face libiary error,check the link below.</p>
+<p><a href="common-errors/mongodb.html">Common Errors of Mongo DB</a></p>
+<h1 id="common-errors"><a class="header" href="#common-errors">Common Errors</a></h1>
+<p>Errors often occurs in some packages.</p>
+<h1 id="common-errors-of-mongo-db"><a class="header" href="#common-errors-of-mongo-db">Common Errors of Mongo DB</a></h1>
+<blockquote>
+<p>Common error of Mongo DB</p>
+</blockquote>
+<h1 id="icu-libiary-error"><a class="header" href="#icu-libiary-error">ICU Libiary Error</a></h1>
 <p>If you face the <code>icu</code> libary errors like below,you will need to compile library files from source code.</p>
 <pre><code class="language-sh">~ mongod
 CANNOT LINK EXECUTABLE &quot;mongod&quot;: library &quot;libicudata.so.67&quot; not found 
@@ -523,8 +548,8 @@ cd lib # `lib` directory stores compiled executable files
 
 # Move all compiled executable files to the `$PREFIX/usr/lib` directory
 mv * $PREFIX/usr/lib 
-
-# start the `mongodb` server
+</code></pre>
+<pre><code class="language-sh"># start the `mongodb` server
 mongod
 </code></pre>
 <p>Open new Session.</p>

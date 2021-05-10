@@ -103,7 +103,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html" class="active"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Test</div></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">6.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html" class="active"><strong aria-hidden="true">7.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">8.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">8.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -205,10 +205,9 @@ bash setup-pointless-repo.sh
 </code></pre>
 <p>When installation is finished, create path to store data of <code>MongoDB</code>.</p>
 <pre><code class="language-sh"># setup the database storage directory for mongodb
-mkdir $PREFIX/ data
-mkdir $PREFIX/data db
+mkdir -p /data/data/com.termux/files/usr/data/db
 </code></pre>
-<p><strong>Testing</strong></p>
+<p><strong>Check Work Well or Not</strong></p>
 <pre><code class="language-sh"># Test the mongodb
 ~ mongod --version
 
@@ -220,37 +219,10 @@ modules: none
 build environment:
     distarch: aarch64
     target_arch: aarch64
+    
 </code></pre>
-<p>If you face the <code>icu</code> libary errors like below,you will need to compile library files from source code.</p>
-<pre><code class="language-sh">~ mongod
-CANNOT LINK EXECUTABLE &quot;mongod&quot;: library &quot;libicudata.so.67&quot; not found 
-</code></pre>
-<h1 id="compile-the-icu-library"><a class="header" href="#compile-the-icu-library">Compile The <code>icu</code> Library</a></h1>
-<pre><code class="language-sh"># install the deps
-pkg i clang cmake python -y
-
-# download `libicu67` archieve
-wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
-
-# Extract (Unzip) `tar` archieve
-tar -xf icu4c-67_1-src.tgz
-
-cd icu/source
-
-./configure --prefix=$PREFIX
-
-# Check  dependencies are exist or not (it will take long time be patient)
-make
-
-# Compile the source code of `icu`
-make install
-
-cd lib # `lib` directory stores compiled executable files
-
-# Move all compiled executable files to the `$PREFIX/usr/lib` directory
-mv * $PREFIX/usr/lib 
-
-# start the `mongodb` server
+<p>If work test like below.</p>
+<pre><code class="language-sh"># start the `mongodb` server
 mongod
 </code></pre>
 <p>Open new Session.</p>
@@ -265,6 +237,8 @@ local   0.000GB
 travel  0.000GB
 &gt;
 </code></pre>
+<p>If you face libiary error,check the link below.</p>
+<p><a href="common-errors/mongodb.html">Common Errors of Mongo DB</a></p>
 
                 </main>
 
@@ -276,6 +250,10 @@ travel  0.000GB
                     </a>
                     
 
+                    
+                    <a rel="next" href="common-errors/common-errors.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     
 
                     <div style="clear: both"></div>
@@ -290,6 +268,10 @@ travel  0.000GB
             </a>
             
 
+            
+            <a rel="next" href="common-errors/common-errors.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
             
         </nav>
 

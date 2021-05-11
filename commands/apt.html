@@ -3,7 +3,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Hardware and Software Requirements - Developement Environment Setup For Android Linux</title>
+    <title>apt - Developement Environment Setup For Android Linux</title>
     
     
 
@@ -18,32 +18,32 @@
     <meta name="theme-color" content="#ffffff" />
 
     
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="../favicon.svg">
     
     
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="../favicon.png">
     
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
     
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="../css/print.css" media="print">
     
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     
-    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
     
 
     <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
     
-    <link rel="stylesheet" href="theme/custom.css">
+    <link rel="stylesheet" href="../theme/custom.css">
     
 
     
@@ -51,7 +51,7 @@
 <body>
     <!-- Provide site root to javascript -->
     <script type="text/javascript">
-        var path_to_root = "";
+        var path_to_root = "../";
         var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy": "navy";
     </script>
 
@@ -103,7 +103,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html" class="active"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li></ol></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="../how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="../hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="../getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="../commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../commands/apt.html" class="active"><strong aria-hidden="true">6.1.</strong> apt</a></li></ol></li><li class="chapter-item expanded "><a href="../lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="../me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="../common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -139,7 +139,7 @@
 
                 <div class="right-buttons">
                     
-                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
                         <i id="print-button" class="fa fa-print"></i>
                     </a>
                     
@@ -175,33 +175,55 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="hardware-and-software-requirements"><a class="header" href="#hardware-and-software-requirements">Hardware and Software Requirements</a></h1>
-<blockquote>
-<p>The hardware and software are very important for SDE.</p>
-</blockquote>
-<h1 id="minimal-hardware-requirement"><a class="header" href="#minimal-hardware-requirement">Minimal Hardware Requirement</a></h1>
-<ul>
-<li>Android Device above android version 7.0</li>
-<li>1GB empty memory space </li>
-</ul>
-<h1 id="software-requirement"><a class="header" href="#software-requirement">Software Requirement</a></h1>
-<ul>
-<li>Termux (Terminal Emulator for Android that can run Linux/Unix command)</li>
-</ul>
-<p>Download <code>Termux</code> from Google Play Store (or) FDroid.</p>
+                    <h1 id="apt"><a class="header" href="#apt">apt</a></h1>
+<p><code>apt</code> is a linux package manager that can install and remove the packages and their dependencies.</p>
+<h2 id="update-the-package-list-and-upgrade-the-system"><a class="header" href="#update-the-package-list-and-upgrade-the-system">Update The Package List And Upgrade The System</a></h2>
+<p><code>update</code> - update the list of avaliable packages
+<code>upgrade</code> - upgrade the packages that are installed in your machine</p>
+<pre><code class="language-sh">apt update &amp;&amp; apt upgrade -y
+</code></pre>
+<h2 id="list-all-of-the-packages"><a class="header" href="#list-all-of-the-packages">List All Of The Packages</a></h2>
+<p>We can list the name of packages that we can install to our machine.</p>
+<pre><code class="language-sh">apt list
+</code></pre>
+<h2 id="installing-the-package"><a class="header" href="#installing-the-package">Installing The Package</a></h2>
+<p>To install package we use <code>install</code> option and added <code>package name</code> to install.</p>
+<pre><code class="language-sh">➜  ~ apt install php
+</code></pre>
+<h2 id="installing-multiple-packages"><a class="header" href="#installing-multiple-packages">Installing Multiple Packages</a></h2>
+<p>We can install multiple packages like below.</p>
+<pre><code class="language-sh">apt install php apache2 # and many more
+</code></pre>
+<h2 id="reinstall-the-packages"><a class="header" href="#reinstall-the-packages">Reinstall The Packages</a></h2>
+<p>To reinstall the package we can use <code>reinstall</code> option.</p>
+<pre><code>apt reinstall php
+</code></pre>
+<h2 id="removing-package"><a class="header" href="#removing-package">Removing Package</a></h2>
+<p>To remove the package we can use like below.</p>
+<pre><code class="language-sh">apt remove php
+</code></pre>
+<h2 id="removing-related-packages"><a class="header" href="#removing-related-packages">Removing Related Packages</a></h2>
+<p>When we remove the package, it remove only one package, but we should remove its related packages and libiaries.</p>
+<pre><code class="language-sh">apt autoremove php
+</code></pre>
+<h2 id="show-the-packages-detail"><a class="header" href="#show-the-packages-detail">Show The Package's Detail</a></h2>
+<p>We can know the detail of packages.</p>
+<pre><code class="language-sh">apt show php
+</code></pre>
+<p>You can use <code>apt --help</code> for other options.</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
-                    <a rel="prev" href="how-to-read.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../commands/commands.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                     
 
                     
-                    <a rel="next" href="getting-start.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../lamp-setup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                     
@@ -213,13 +235,13 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
-            <a rel="prev" href="how-to-read.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a rel="prev" href="../commands/commands.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
             
 
             
-            <a rel="next" href="getting-start.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+            <a rel="next" href="../lamp-setup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>
             
@@ -242,14 +264,14 @@
     
 
     
-    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
     
 
-    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Custom JS scripts -->
     

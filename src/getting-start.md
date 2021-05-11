@@ -7,7 +7,7 @@
 Open the `Termux` and then run the following commands to install the core utils.
 
 ```sh
-# install and upgrade the system
+# update the package list and upgrade the system
 apt update && apt upgrade -y
 ```
 
@@ -140,4 +140,3 @@ cd hello
 pwd 
 /data/data/com.termux/files/home/hello
 ```
-

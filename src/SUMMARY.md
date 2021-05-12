@@ -11,7 +11,11 @@
   - [ls](commands/ls.md)
   - [cd](commands/cd.md)
   - [chmod](commands/chmod.md)
-  
+  - [mv](commands/mv.md)
+  - [mkdir](commands/mkdir.md)
+  - [touch](commands/touch.md)
+  - [nano](commands/nano.md)
+
 - [LAMP Setup](./lamp-setup.md)
 - [ME*N Setup](./me*n-setup.md)
 

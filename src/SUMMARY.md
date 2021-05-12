@@ -10,6 +10,7 @@
   - [apt](commands/apt.md)
   - [ls](commands/ls.md)
   - [cd](commands/cd.md)
+  - [chmod](commands/chmod.md)
   
 - [LAMP Setup](./lamp-setup.md)
 - [ME*N Setup](./me*n-setup.md)

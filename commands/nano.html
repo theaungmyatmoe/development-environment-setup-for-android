@@ -3,7 +3,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Common Errors - Developement Environment Setup For Android Linux</title>
+    <title>nano - Developement Environment Setup For Android Linux</title>
     
     
 
@@ -103,7 +103,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="../how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="../hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="../getting-start.html"><strong aria-hidden="true">5.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li><li class="chapter-item expanded "><a href="../commands/ls.html"><strong aria-hidden="true">6.2.</strong> ls</a></li><li class="chapter-item expanded "><a href="../commands/cd.html"><strong aria-hidden="true">6.3.</strong> cd</a></li><li class="chapter-item expanded "><a href="../commands/chmod.html"><strong aria-hidden="true">6.4.</strong> chmod</a></li><li class="chapter-item expanded "><a href="../commands/mv.html"><strong aria-hidden="true">6.5.</strong> mv</a></li><li class="chapter-item expanded "><a href="../commands/mkdir.html"><strong aria-hidden="true">6.6.</strong> mkdir</a></li><li class="chapter-item expanded "><a href="../commands/touch.html"><strong aria-hidden="true">6.7.</strong> touch</a></li><li class="chapter-item expanded "><a href="../commands/nano.html"><strong aria-hidden="true">6.8.</strong> nano</a></li></ol></li><li class="chapter-item expanded "><a href="../lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="../me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="../common-errors/common-errors.html" class="active"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="../how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="../hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="../getting-start.html"><strong aria-hidden="true">5.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li><li class="chapter-item expanded "><a href="../commands/ls.html"><strong aria-hidden="true">6.2.</strong> ls</a></li><li class="chapter-item expanded "><a href="../commands/cd.html"><strong aria-hidden="true">6.3.</strong> cd</a></li><li class="chapter-item expanded "><a href="../commands/chmod.html"><strong aria-hidden="true">6.4.</strong> chmod</a></li><li class="chapter-item expanded "><a href="../commands/mv.html"><strong aria-hidden="true">6.5.</strong> mv</a></li><li class="chapter-item expanded "><a href="../commands/mkdir.html"><strong aria-hidden="true">6.6.</strong> mkdir</a></li><li class="chapter-item expanded "><a href="../commands/touch.html"><strong aria-hidden="true">6.7.</strong> touch</a></li><li class="chapter-item expanded "><a href="../commands/nano.html" class="active"><strong aria-hidden="true">6.8.</strong> nano</a></li></ol></li><li class="chapter-item expanded "><a href="../lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="../me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="../common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -175,21 +175,29 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="common-errors"><a class="header" href="#common-errors">Common Errors</a></h1>
-<p>Errors often occurs in some packages.</p>
+                    <h1 id="nano"><a class="header" href="#nano">nano</a></h1>
+<blockquote>
+<p><code>nano</code> is standard text editor.</p>
+</blockquote>
+<h1 id="create-new-file"><a class="header" href="#create-new-file">Create New File</a></h1>
+<pre><code class="language-sh">nano hello.txt
+</code></pre>
+<p><kdb>CTRL+S</kdb> to save and <kdb>CTRL+X</kdb> to exist.</p>
+<h1 id="searching-text"><a class="header" href="#searching-text">Searching Text</a></h1>
+<p><kdb>CTRL+W</kdb> and input what ypu want to find and <kdb>Enter</kdb> to search.</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
-                    <a rel="prev" href="../me*n-setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../commands/touch.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                     
 
                     
-                    <a rel="next" href="../common-errors/mongodb.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../lamp-setup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                     
@@ -201,13 +209,13 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
-            <a rel="prev" href="../me*n-setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a rel="prev" href="../commands/touch.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
             
 
             
-            <a rel="next" href="../common-errors/mongodb.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+            <a rel="next" href="../lamp-setup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>
             

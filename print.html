@@ -105,7 +105,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Start</a></li><li class="chapter-item expanded "><a href="commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li></ol></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li><li class="chapter-item expanded "><a href="commands/ls.html"><strong aria-hidden="true">6.2.</strong> ls</a></li><li class="chapter-item expanded "><a href="commands/cd.html"><strong aria-hidden="true">6.3.</strong> cd</a></li></ol></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -366,6 +366,99 @@ greeting.txt
 <pre><code class="language-sh">apt show php
 </code></pre>
 <p>You can use <code>apt --help</code> for other options.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ls-1"><a class="header" href="#ls-1">ls</a></h1>
+<blockquote>
+<p>We use <code>ls</code> when we wnat to know the list of files (or) folders.</p>
+</blockquote>
+<h1 id="listing-files"><a class="header" href="#listing-files">Listing Files</a></h1>
+<p>List all normal files and folders.</p>
+<pre><code class="language-sh">ls
+</code></pre>
+<p>List of normal files and folders including hidden files and folders startimg with dot <code>.</code>.</p>
+<pre><code>ls -a
+</code></pre>
+<h1 id="long-list-format"><a class="header" href="#long-list-format">Long List Format</a></h1>
+<p>We can use <code>ls -l</code> to show files with long list format.</p>
+<pre><code class="language-sh">ls -l
+</code></pre>
+<h1 id="human-readable-format"><a class="header" href="#human-readable-format">Human Readable Format</a></h1>
+<p>We can use <code>-h</code> option to list files as human readable format.</p>
+<pre><code class="language-sh">ls -alh
+</code></pre>
+<h1 id="list-files-from-individual-directory"><a class="header" href="#list-files-from-individual-directory">List Files From Individual Directory</a></h1>
+<p>We can use <code>ls &lt;directory_name&gt;</code> to list of files from <code>&lt;directory_name&gt;</code>.</p>
+<p>Let's imagine we have <code>hello</code> directory.Under the <code>hello</code> directory we have <code>README.md</code> and other files.So,the directory structure of <code>hello</code> looks like below.</p>
+<pre><code>hello
+└── README.md
+</code></pre>
+<p>We want to know the list of files under <code>hello</code> directory.
+So,we just need to use <code>ls</code> command like below.</p>
+<pre><code class="language-sh">➜  ~ ls hello
+README.md
+</code></pre>
+<p>You can add other options as you like.</p>
+<h1 id="understanding-long-format"><a class="header" href="#understanding-long-format">Understanding Long Format</a></h1>
+<p>Let's create <code>hello.txt</code> file by using <code>touch hello.txt</code>.</p>
+<pre><code class="language-sh">touch hello.txt
+</code></pre>
+<p>List the long format of <code>hello.txt</code> file.</p>
+<pre><code class="language-sh">ls -l hello.txt
+-rw------- 1 root root 0 May 12 12:30 hello.txt
+</code></pre>
+<p><code>-</code> =&gt; Indicate the file</p>
+<p><code>rw</code> =&gt; Read and write access for owner</p>
+<p><code>-------</code> =&gt; There is no access for group and other user</p>
+<p><code>root</code> =&gt; Owner</p>
+<p><code>root</code> =&gt; Group</p>
+<p><code>1</code> =&gt; Hardlink</p>
+<p><code>0</code> =&gt; File size</p>
+<p><code>May 12 12:30</code> =&gt; File created date</p>
+<p><code>hello.txt</code> =&gt; File name</p>
+<p>You can use <code>apt --help</code> for other options.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="cd-1"><a class="header" href="#cd-1">cd</a></h1>
+<blockquote>
+<p>We use <code>cd</code> command to travel between directories.</p>
+</blockquote>
+<h1 id="change-to-home-directory"><a class="header" href="#change-to-home-directory">Change To Home Directory</a></h1>
+<p><code>cd</code> command itself is to go to user's home.</p>
+<pre><code class="language-sh">cd 
+</code></pre>
+<p>We can use <code>cd ~</code> to go back home directory.</p>
+<h1 id="change-to-other-directory"><a class="header" href="#change-to-other-directory">Change To Other Directory</a></h1>
+<p>Assume that we have <code>hello</code> folder in our machine.We want to go under the <code>hello</code> directory.</p>
+<pre><code>cd hello
+</code></pre>
+<h1 id="print-working-directory"><a class="header" href="#print-working-directory">Print Working Directory</a></h1>
+<p>We need to know where are we working under?
+So, we just need to run <code>pwd</code> stand for <strong>Print Working Directory</strong>.</p>
+<pre><code class="language-sh">pwd
+/home/hello
+</code></pre>
+<h1 id="back-to-parent-directory"><a class="header" href="#back-to-parent-directory">Back To Parent Directory</a></h1>
+<p>We are under <code>hello</code> directory.But we want to go to parent directory of <code>hello</code> directory.</p>
+<pre><code class="language-sh">pwd
+/home/hello # =&gt; `/home` is parent directory of `/hello` directory
+cd .. # Go Back To Parent Directory
+pwd
+/home
+</code></pre>
+<h1 id="jump-to-other-directory"><a class="header" href="#jump-to-other-directory">Jump To Other Directory</a></h1>
+<p>We can travel to other directory not going back to home directory.
+Assume that we  have <code>hi</code> directory under <code>/home</code> directory.</p>
+<pre><code class="language-sh">ls
+hello hi
+cd hello
+
+pwd
+/home/hello
+</code></pre>
+<p>We just need to run <code>cd ~/hi</code> to go to the <code>hi</code> directory.</p>
+<pre><code class="language-sh">cd ~/hi
+
+pwd
+/home/hi
+</code></pre>
+<p>You can also use <code>$HOME</code> as <code>~</code>.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="lamp-stack-setup"><a class="header" href="#lamp-stack-setup">LAMP Stack Setup</a></h1>
 <blockquote>
 <p><strong>LAMP</strong> stand for <strong>L</strong>inux,<strong>A</strong>pache Web Server,<strong>M</strong>ySQL Database and <strong>P</strong>HP.</p>

@@ -105,7 +105,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li><li class="chapter-item expanded "><a href="commands/ls.html"><strong aria-hidden="true">6.2.</strong> ls</a></li><li class="chapter-item expanded "><a href="commands/cd.html"><strong aria-hidden="true">6.3.</strong> cd</a></li></ol></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="how-to-read.html"><strong aria-hidden="true">3.</strong> How to read this book?</a></li><li class="chapter-item expanded "><a href="hardware-and-software-requirements.html"><strong aria-hidden="true">4.</strong> Hardware and Software Requirements</a></li><li class="chapter-item expanded "><a href="getting-start.html"><strong aria-hidden="true">5.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="commands/commands.html"><strong aria-hidden="true">6.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/apt.html"><strong aria-hidden="true">6.1.</strong> apt</a></li><li class="chapter-item expanded "><a href="commands/ls.html"><strong aria-hidden="true">6.2.</strong> ls</a></li><li class="chapter-item expanded "><a href="commands/cd.html"><strong aria-hidden="true">6.3.</strong> cd</a></li><li class="chapter-item expanded "><a href="commands/chmod.html"><strong aria-hidden="true">6.4.</strong> chmod</a></li></ol></li><li class="chapter-item expanded "><a href="lamp-setup.html"><strong aria-hidden="true">7.</strong> LAMP Setup</a></li><li class="chapter-item expanded "><a href="me*n-setup.html"><strong aria-hidden="true">8.</strong> ME*N Setup</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Errors of Package</li><li class="chapter-item expanded "><a href="common-errors/common-errors.html"><strong aria-hidden="true">9.</strong> Common Errors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="common-errors/mongodb.html"><strong aria-hidden="true">9.1.</strong> Mongo DB</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -459,6 +459,71 @@ pwd
 /home/hi
 </code></pre>
 <p>You can also use <code>$HOME</code> as <code>~</code>.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<blockquote>
+<p><code>chmod</code> to manage permission of files and folders.</p>
+</blockquote>
+<h1 id="permissions"><a class="header" href="#permissions">Permissions</a></h1>
+<p>Generally,there are three permissions -</p>
+<ul>
+<li>read</li>
+<li>write</li>
+<li>execute</li>
+</ul>
+<h1 id="give-all-permission"><a class="header" href="#give-all-permission">Give All Permission</a></h1>
+<p>Assum that we have <code>hello.txt</code>.
+We want to give all of the permission to owner and others.
+We just need to run like below.</p>
+<pre><code class="language-sh">chmod a+rwx hello.txt
+</code></pre>
+<h1 id="individually"><a class="header" href="#individually">Individually</a></h1>
+<h2 id="read-access"><a class="header" href="#read-access">Read Access</a></h2>
+<pre><code class="language-sh">chmod +r hello.txt
+</code></pre>
+<h2 id="write-access"><a class="header" href="#write-access">Write Access</a></h2>
+<pre><code class="language-sh">chmod +w hello.txt
+</code></pre>
+<h2 id="execute-access"><a class="header" href="#execute-access">Execute Access</a></h2>
+<pre><code class="language-sh">chmod +x hello.txt
+</code></pre>
+<h1 id="remove-the-permission"><a class="header" href="#remove-the-permission">Remove The Permission</a></h1>
+<h2 id="remove-read-access"><a class="header" href="#remove-read-access">Remove Read Access</a></h2>
+<pre><code class="language-sh">chmod -x hello.txt
+</code></pre>
+<h2 id="remove-write-access"><a class="header" href="#remove-write-access">Remove Write Access</a></h2>
+<pre><code class="language-sh">chmod -w hello.txt
+</code></pre>
+<h2 id="remove-execute-access"><a class="header" href="#remove-execute-access">Remove Execute Access</a></h2>
+<pre><code class="language-sh">chmod -w hello.txt
+</code></pre>
+<h2 id="remove-all-of-them"><a class="header" href="#remove-all-of-them">Remove All Of Them</a></h2>
+<pre><code class="language-sh">chmod a+rwx hello.txt
+</code></pre>
+<h1 id="how-to-change-permissions-in-numeric-code-in-linux"><a class="header" href="#how-to-change-permissions-in-numeric-code-in-linux">How to Change Permissions in Numeric Code in Linux</a></h1>
+<p>You may need to know how to change permissions in numeric code in Linux, so to do this you use numbers instead of “r”, “w”, or “x”.</p>
+<ul>
+<li>0 = No Permission</li>
+<li>1 = Execute</li>
+<li>2 = Write</li>
+<li>4 = Read</li>
+<li></li>
+</ul>
+<p>Basically, you add up the numbers depending on the level of permission you want to give.</p>
+<p>Permission numbers are:</p>
+<ul>
+<li>0 = ---</li>
+<li>1 = --x</li>
+<li>2 = -w-</li>
+<li>3 = -wx</li>
+<li>4 = r-</li>
+<li>5 = r-x</li>
+<li>6 = rw-</li>
+<li>7 = rwx</li>
+</ul>
+<p>For example:</p>
+<p><code>chmod 777 foldername</code> will give read, write, and execute permissions for everyone.</p>
+<p><code>chmod 700 foldername</code> will give read, write, and execute permissions for the user only.</p>
+<p><code>chmod 327 foldername</code> will give write and execute (3) permission for the user, w (2) for the group, and read, write, and execute for the users.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="lamp-stack-setup"><a class="header" href="#lamp-stack-setup">LAMP Stack Setup</a></h1>
 <blockquote>
 <p><strong>LAMP</strong> stand for <strong>L</strong>inux,<strong>A</strong>pache Web Server,<strong>M</strong>ySQL Database and <strong>P</strong>HP.</p>

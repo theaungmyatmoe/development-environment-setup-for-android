@@ -60,7 +60,7 @@ chmod -w hello.txt
 ## Remove All Of Them
 
 ```sh
-chmod a+rwx hello.txt
+chmod a-rwx hello.txt
 ```
 
 # How to Change Permissions in Numeric Code in Linux

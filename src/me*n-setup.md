@@ -27,6 +27,15 @@ pkg i yarn
 
 # MongoDB
 
+> Mongo is not working correctly at this moment.
+> We only have a potential solution as follow:
+
+to install your favourite Linux distribution like Ubuntu in termux (in bottle installation) .
+
+Please use, **Andronix - Linux on Android** (instructions to install your favorite Linux distribution) or you can install arch Linux by following termux documentation.
+
+https://wiki.termux.com/wiki/PRoot#Installing_Linux_distributions
+
 MongoDB is not officially support for `aarch64` and some CPUs of Android.
 
 First of all , we will download `itspointless` repo's `setup.sh` to install their deps (dependencies) to our environment.
